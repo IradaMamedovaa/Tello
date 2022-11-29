@@ -1,0 +1,40 @@
+@import '../../assets/styles/mixins.scss';
+.productCard{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(164, 164, 164, 0.08);
+    border-radius: 4px;
+    padding: 16px ;
+    color: black;
+    img{
+        width: 142px;
+        margin-bottom: 24px;
+        transition: 400ms;
+        &:hover{
+            width: 220px;
+        }
+    }
+    .productName{
+        margin-bottom: 16px;
+        max-width: 230px;
+    }
+    .aznSymbol{
+        width: 18px;
+        height: 15px;
+    }
+    .price{
+        display: flex;
+        gap: 10px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+
+@include lg{
+    .productCard{
+        padding: 40px 49px 25px 49px;
+        img{
+            width: 200px;
+        }
+    }
+}

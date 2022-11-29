@@ -1,0 +1,44 @@
+@import "../../../assets/styles/mixins.scss";
+@import "../../../assets/styles/variables.scss";
+.empty-card {
+  @include flex(column, center, center);
+  gap: 30px;
+  padding: 24px 0;
+  .empty-div {
+    @include size(100%, 100%);
+    background-color: white;
+    @include flex(column, center, center);
+    gap: 40px;
+    padding: 30% 0;
+    box-shadow: 0px 4px 8px rgba(164, 164, 164, 0.5);
+    border-radius: 8px;
+    .basket-btn {
+      @include size(250px, 50px);
+      background-color: $green-color;
+      color: white;
+      border-radius: 8px;
+      @include flex(row, center, center);
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .basket-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #bdbdbd;
+    }
+  }
+}
+
+@include lg {
+  .empty-card {
+    padding: 45px 0;
+    .empty-div {
+      padding: 10% 0;
+    }
+  }
+}

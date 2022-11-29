@@ -1,0 +1,11 @@
+@import '../../assets/styles/mixins.scss';
+@import "../../assets/styles/variables.scss";
+    
+.error-page{
+    @include flex(column, center, center);
+    padding: 10% 0;
+    .error-code{
+        @include font(100px, 600);
+        color: $green-color;}
+    .error-msg{
+        @include font(20px, 500)}}

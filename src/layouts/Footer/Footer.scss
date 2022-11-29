@@ -1,0 +1,111 @@
+@import "../../assets/styles/variables.scss";
+@import '../../assets/styles/mixins.scss';
+
+.pageFooter{
+    background: $footer-color;
+}
+footer{
+    padding-top: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .footerLogo{
+        margin-top: 10px;
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .socials{
+        display:flex ;
+        gap: 33px;
+        padding: 18px 0;
+        img{
+            fill: rgba($color: white, $alpha: 0.8);
+        }
+        div{
+            display: flex;
+            align-items: center;
+        }
+        
+
+    }
+    h6{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 30px 0;
+        color: white;
+        cursor: pointer;
+    }
+    p{
+        font-style: normal;
+        font-weight: 400;
+        padding: 8px 0;
+        font-size: 16px;
+        color: rgba($color: white, $alpha: 0.8);
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+        &:hover {
+            color: $green-color;
+        }
+    }
+}
+.footerChild{
+    .privacyAndPolicy{
+        display: flex;
+        gap: 40px;
+        padding: 16px 10px;
+        justify-content: space-evenly;
+        a{
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    .copyrights{
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        color: white;
+        padding: 16px 0;
+        border-top: 1px solid rgba($color: white, $alpha: 0.1);
+        margin: 0;
+        gap: 12px;
+    }
+}
+
+@include lg{
+    //FOOTER SECTION
+    footer{
+        padding: 46px 75px ;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: start;
+        .column{
+            align-items: flex-start;
+        }
+        h6{
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        p{
+            padding: 8px 0;
+            margin: 0;
+        }
+    }
+    .footerChild{
+        border-top: 1px solid rgba($color: white, $alpha: 0.1);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 8px 75px;
+        .copyrights{
+            border-top: none;
+        }
+    }
+}

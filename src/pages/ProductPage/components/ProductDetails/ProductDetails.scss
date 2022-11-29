@@ -1,0 +1,256 @@
+@import "../../../../assets/styles/mixins.scss";
+@import "../../../../assets/styles/variables.scss";
+.productDetails {
+  display: grid;
+  .mainDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .productName {
+    font-style: normal;
+    order: 1;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333333;
+  }
+  .stars {
+    display: flex;
+    padding: 18px 0;
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    .star {
+      width: 15px;
+    }
+    .rCount {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #4f4f4f;
+      padding-left: 10px;
+    }
+    .comments {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #2d9cdb;
+    }
+    .aft {
+      color: #f2f2f2;
+      padding: 8px;
+    }
+  }
+  .price {
+    font-size: 20px;
+    padding: 5px 0 14px 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    order: 2;
+  }
+  .azn {
+    width: 18px;
+    height: 15px;
+  }
+  .colorsAndStorage {
+    &::before {
+      content: "";
+      height: 1px;
+      width: 90%;
+      background-color: #f2f2f2;
+      position: absolute;
+      z-index: 777;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 90%;
+      background-color: #f2f2f2;
+      position: absolute;
+      z-index: 777;
+    }
+    .colors {
+      display: flex;
+      padding: 24px 0;
+      gap: 22px;
+      align-items: center;
+      #selectedColor{
+        border: 3px solid rgb(41, 41, 41);
+      }
+      div {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+      .Pink,
+      .pink {
+        background-color: pink;
+      }
+      .Midnight,
+      .midnight,
+      .Black,
+      .black {
+        background-color: black;
+      }
+      .Red,
+      .red {
+        background-color: red;
+      }
+      .Dark {
+        background-color: rgb(158, 23, 84);
+      }
+      .Green {
+        background-color: rgb(146, 234, 204);
+      }
+      .green {
+        background-color: green;
+      }
+      .White,
+      .white,
+      .Starlight {
+        background-color: antiquewhite;
+        border: 1px solid lightgrey;
+      }
+      .Gray,
+      .gray,
+      .grey,
+      .Grey {
+        background-color: gray;
+      }
+      .Gold,
+      .gold {
+        background-color: gold;
+      }
+      .Silver,
+      .silver {
+        background-color: silver;
+      }
+      .graphite,
+      .Graphite {
+        background-color: #4f4f4f;
+      }
+      .siearrablue {
+        background-color: #5ca8d4;
+      }
+      .Blue,
+      .blue {
+        background-color: blue;
+      }
+      .Purple,
+      .purple {
+        background-color: plum;
+      }
+      .Ocean {
+        background-color: #5ca8d4;
+      }
+    }
+    .storages {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 8px 0 24px 0;
+      gap: 16px;
+      #selectedStorage{
+        border: 3px solid rgb(91, 88, 88);
+      }
+      .storageVariant {
+        font-style: normal;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        background-color: #828282;
+        color: white;
+      }
+      ._32GB {
+        background-color: #f2f2f2;
+        color: black;
+      }
+      ._64GB {
+        background-color: #d4cccc;
+        color: black;
+      }
+      ._128GB {
+        background-color: #828282;
+        color: white;
+      }
+      ._256GB {
+        background-color: #4f4f4f;
+        color: white;
+      }
+      ._512GB {
+        background-color: #434343;
+        color: white;
+      }
+      ._1TB {
+        background-color: rgb(29, 28, 28);
+        color: white;
+      }
+    }
+  }
+  .productCount {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 24px 0;
+    .incr,
+    .decr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f2f2f2;
+      color: #4f4f4f;
+    }
+  }
+  .toBasket {
+    .toBasketBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      color: #ffffff;
+      background-color: $green-color;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 48px;
+    }
+  }
+  .countAndBasket{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@include lg {
+  .productDetails {
+    display: block;
+    padding: 0 48px;
+    .mainDetails{
+      display: block;
+    }
+    .countAndBasket{
+      display: block;
+    }
+    .toBasket {
+      margin-top: 30px;
+    }
+    
+  .price {
+    padding: 14px 0 19px 0;
+  }.colorsAndStorage {
+    &::before {
+      width: 50%;
+    }
+    &::after {
+      width: 50%;
+    }
+  }
+  }
+}

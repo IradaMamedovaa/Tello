@@ -1,0 +1,16 @@
+@import "../../assets/styles/mixins.scss";
+.product{
+    padding: 25px;
+    .img-details{
+        display: block;
+    }
+}
+
+@include lg{
+    .product{
+        padding: 25px 75px;
+        .img-details{
+            display: flex !important;
+        }
+    }
+}

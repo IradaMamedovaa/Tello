@@ -1,0 +1,68 @@
+@import "../../../../assets/styles/mixins.scss";
+.product-images {
+  max-width: 100%;
+  flex-grow: 1;
+  .mySwiper2 {
+    height: 400px;
+    .swiper-slide-prev{
+      opacity: 0;
+    }
+    .swiper-wrapper{
+      align-items: center;
+    }
+    .swiper-slide-active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 275px;
+      }
+    }
+  }
+  .mySwiper{
+    margin-bottom: 30px ;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .swiper-slide-thumb-active{
+      background-color: rgba(180, 180, 180, 0.266)
+    }
+    .swiper-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+    }
+  }
+  .selectImg {
+    width: 72px !important;
+    border-radius: 20px;
+    height: 86px;
+    padding: 16px;
+    position: relative;
+    left: 40px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after , .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled , .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    color: #2E3A59;
+}
+
+@include lg{
+  .product-images {
+    max-width: 40%;
+    .selectImg{
+      left: 0
+    }
+  }
+}

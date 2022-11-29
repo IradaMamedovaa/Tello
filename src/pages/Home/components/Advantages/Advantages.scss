@@ -1,0 +1,32 @@
+@import '../../../../assets/styles/mixins.scss';
+.advantages{
+    padding: 72px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    &>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-title{
+        font-size: 20px;
+        font-weight: 500;
+        padding: 16px 0;
+    }
+    .card-info{
+        padding-bottom: 16px;
+    }
+    img{
+        padding-bottom: 16px;
+    }
+}
+@include lg{
+    //        {{{{HOME PAGE}}}}      /ADVANTAGES SECTION 
+    .advantages{
+        padding: 136px 107px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

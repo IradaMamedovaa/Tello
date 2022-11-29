@@ -1,0 +1,40 @@
+@import '../../../../assets/styles/mixins.scss';
+
+.adsSection{
+    display: none;
+    padding: 48px 75px;
+    background: #F5F5F7;
+    .ads-swiper{
+        display: flex !important;
+    }
+    .swiper-wrapper{
+        padding: 32px;
+    }
+    .swiper-slide{
+        width: max-content !important;
+        gap: 20px;
+        div{
+            width: 176px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            background: white;
+            margin-right:16px ;
+            img{
+                width: 128px;
+                height: 56px;
+                object-fit: contain;
+            }
+        }
+        
+    }
+}
+
+@include lg{
+    //        {{{{HOME PAGE}}}}      /ADS SECTION 
+    .adsSection{
+        display: block;
+    }
+}

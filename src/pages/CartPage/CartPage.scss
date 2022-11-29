@@ -1,0 +1,19 @@
+@import "../../assets/styles/mixins.scss";
+.cartPage{
+    padding: 24px 16px;
+   
+    .inCartCount {
+        margin-top: 16px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #4f4f4f;
+      }
+}
+
+@include lg{
+    .cartPage{
+        padding: 40px 78px;
+    }
+}

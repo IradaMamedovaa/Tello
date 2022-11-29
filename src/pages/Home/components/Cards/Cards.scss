@@ -1,0 +1,83 @@
+@import "../../../../assets/styles/mixins.scss";
+.cards {
+  @include flex(column);
+  background: rgb(242, 228, 221);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 228, 221, 1) 0%,
+    rgba(233, 233, 233, 1) 100%
+  );
+  border-radius: 8px;
+  contain: content;
+  padding: 25px;
+  .text {
+    @include flex(column);
+    gap: 20px;
+    padding-bottom: 40px;
+    h4 {
+      @include font(16px, 600);
+      padding: 0;
+      margin: 0
+    }
+    p {
+      @include font(12px, 300);
+    }
+    a {
+      color: #3366ff;
+      @include flex(row, $align: center);
+      gap: 10px;
+      @include font(12px, 300);
+    }
+  }
+  img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
+.phone-card{
+  height: 400px;
+}
+.col1{
+  flex-grow: 1;
+}
+.col2{
+  flex-grow: 1;
+  img{
+    right: 25px;
+  }
+}
+.watch-card{
+  img{
+    height: 141px;
+    width: 171px;
+  }
+}
+.iphone-card{
+  img{
+    width: 187px;
+  }
+}
+@include lg{
+  .cards{
+    padding: 0;
+    .text{
+      padding: 30px;
+    }
+  }
+  .watch-card{
+    padding-top: 0;
+    img{
+      height: 256px;
+      width: 310px;
+    }
+  }
+  .iphone-card{
+    img{
+      width: 330px;
+    }
+  }
+  .cards{
+    height: 100%;
+  }
+}

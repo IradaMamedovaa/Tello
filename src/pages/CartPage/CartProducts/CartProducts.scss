@@ -1,0 +1,108 @@
+@import "../../../assets/styles/mixins.scss";
+.cartProducts {
+  padding: 24px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  .cartProd {
+    display: grid;
+    margin: 20px;
+    gap: 10px;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px 40px 16px 16px;
+
+    border: 1px solid #e5e5e5;
+    img {
+      width: 50px;
+    }
+    .nameAndPrice {
+      .cartPrice {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        display: flex;
+        gap: 5px;
+        margin-right: 20px;
+      }
+      
+      .priceIcon {
+        fill: #828282;
+      }
+      img {
+        width: 13px;
+      }
+    }
+    .prodQuantity {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      img {
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 9px;
+      }
+    }
+    .deleteItem {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      img {
+        width: 18px;
+      }
+    }
+  }
+  .totalPrice {
+    padding: 0 60px 0 0;
+    h5 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #1d2123;
+    }
+    .line {
+      height: 1px;
+      background-color: #1d2123;
+      margin: 16px 0;
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1d2123;
+    }
+    .finalPrice{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+@include lg {
+  .cartProducts {
+    padding: 45px 0;
+    grid-template-columns: 2fr 1fr;
+    .totalPrice{
+      padding: 0;
+    }
+    .deleteItem {
+      display: flex;
+      align-items: center;
+      padding: 0 50px;
+      img {
+        width: 18px;
+      }
+    }
+  }
+}
